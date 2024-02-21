@@ -8,33 +8,9 @@ export const items =  [
       description: 'Apple iPhone 14 (128 GB) - Blue',
       price: '89999',
     },
-    {
-        id: 1,
-        category: 'mobiles',
-        title: "Apple iPhone 14",
-        imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
-        amazonLink: 'https://amzn.to/3PuckZp',
-        description: 'Apple iPhone 14 (128 GB) - Blue',
-        price: '89999',
-      },
-      {
-        id: 1,
-        category: 'mobiles',
-        title: "Apple iPhone 14",
-        imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
-        amazonLink: 'https://amzn.to/3PuckZp',
-        description: 'Apple iPhone 14 (128 GB) - Blue',
-        price: '89999',
-      },
-      {
-        id: 1,
-        category: 'mobiles',
-        title: "Apple iPhone 14",
-        imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
-        amazonLink: 'https://amzn.to/3PuckZp',
-        description: 'Apple iPhone 14 (128 GB) - Blue',
-        price: '89999',
-      },
+    
+      
+      
     {
       id: 5,
       category: 'laptops',
@@ -43,6 +19,15 @@ export const items =  [
       amazonLink: 'https://amzn.to/3EzeQaC',
       description: 'Xiaomi [Smartchoice] Notebookpro ',
       price: '49999',
+    },
+    {
+      id: 1,
+      category: 'mobiles',
+      title: "Apple iPhone 14",
+      imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
+      amazonLink: 'https://amzn.to/3PuckZp',
+      description: 'Apple iPhone 14 (128 GB) - Blue',
+      price: '89999',
     },
     {
       id: 7,
@@ -63,6 +48,15 @@ export const items =  [
       price: '79999',
     },
     {
+      id: 1,
+      category: 'mobiles',
+      title: "Apple iPhone 14",
+      imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
+      amazonLink: 'https://amzn.to/3PuckZp',
+      description: 'Apple iPhone 14 (128 GB) - Blue',
+      price: '89999',
+    },
+    {
       id: 6,
       category: 'tablets',
       title: "Lenovo Tab P12 Pro AMOLED",
@@ -79,6 +73,15 @@ export const items =  [
       amazonLink: 'https://amzn.to/3r6XJtv',
       description: 'Apple iPhone 13 (128GB) - Blue',
       price: '69999',
+    },
+    {
+      id: 1,
+      category: 'mobiles',
+      title: "Apple iPhone 14",
+      imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
+      amazonLink: 'https://amzn.to/3PuckZp',
+      description: 'Apple iPhone 14 (128 GB) - Blue',
+      price: '89999',
     },
     {
       id: 4,
@@ -99,6 +102,15 @@ export const items =  [
       price: '49999',
     },
     {
+      id: 1,
+      category: 'mobiles',
+      title: "Apple iPhone 14",
+      imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
+      amazonLink: 'https://amzn.to/3PuckZp',
+      description: 'Apple iPhone 14 (128 GB) - Blue',
+      price: '89999',
+    },
+    {
       id: 8,
       category: 'laptops',
       title: "Apple MacBook Air Laptop",
@@ -107,6 +119,15 @@ export const items =  [
       description: 'Apple MacBook Air Laptop M1 chip, 13.3-inch/33.74 cm Retina Display, ',
       price: '89999',
     },
+    {
+      id: 1,
+      category: 'mobiles',
+      title: "Apple iPhone 14",
+      imgSrc: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg',
+      amazonLink: 'https://amzn.to/3PuckZp',
+      description: 'Apple iPhone 14 (128 GB) - Blue',
+      price: '89999',
+    }
 
 
   ]

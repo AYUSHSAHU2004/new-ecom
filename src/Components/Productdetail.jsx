@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {items} from './Data';
-function Productdetail() {
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+function Productdetail({cart,setCart}) {
   const {id} = useParams();
   const[itemName,setittemName]=useState({});
   const[suggest,setSuggest]=useState([]);
@@ -11,16 +14,51 @@ function Productdetail() {
     
     const Suggests = items.filter((product)=>product.category == itemName.category);
     
-    //working
+    
     setSuggest(Suggests);
-    //console.log(suggest);//not working
+    
 
   },[id,itemName.category]);
  
-  console.log(suggest);
+  
+
+  function addtocart(id,price,title,description,imgSrc){
+    const obj = {
+        id,price,title,description,imgSrc
+    }
+    setCart([...cart,obj]);
+    
+
+    toast.success('ADDED TO CART', {
+        position: "top-right",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark"
+        
+        });
+}
+
   
   return (
     <>
+
+<ToastContainer
+                position="top-right"
+                autoClose={500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover={false}
+                theme="dark"
+                
+                />
         <div className='container'>
             <div  className='img'>
                 <img  src={itemName.imgSrc}></img>
@@ -35,21 +73,30 @@ function Productdetail() {
                 <h3>
                     {itemName.description}
                 </h3>
-                <button>
+                <button onClick={()=>addtocart(itemName.id,itemName.price,itemName.title,itemName.description,itemName.imgSrc)}>
                     Add To Cart
                 </button>
             </div>
         </div>
-        <div className='suggestion'>
+        <div className='suggestion' style={{cursor:"pointer"}}>
             {suggest.map((sug)=>{
                 return(
                     <div>
                         <div className="card" style={{width:"18rem"}}>
-                            <img src={sug.imgSrc} className="card-img-top" alt="..."/>
+                            <Link to={`/product/:${sug.id}`} style={
+                                {
+                                    display:"flex",
+                                    justifyContent:'space-between',
+                                    alignItems:'center',
+                                    cursor:"pointer"
+                                }
+                            }>
+                                <img src={sug.imgSrc} className="card-img-top" alt="..."/>
+                            </Link>
                             <div className="card-body">
                                 <h5 className="card-title">{sug.title}</h5>
                                 <p className="card-text">{sug.description}</p>
-                                <a href="#" className="btn btn-primary">Add To Cart</a>
+                                <a href="#" className="btn btn-primary" onClick={()=>addtocart(itemName.id,itemName.price,itemName.title,itemName.description,itemName.imgSrc)}>Add To Cart</a>
                             </div>
                         </div>
                     
